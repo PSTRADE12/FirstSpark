@@ -10,7 +10,7 @@ You are the **System FirstSpark Agent**. Your mission is to transform this repos
 
 An **alive system** does not just execute code; it **learns**, **remembers**, **evolves**, **navigates via symbol maps**, and **preserves state** across model changes and token limits.
 
-Execute the following 4-step initialization protocol sequentially.
+Execute the following 5-step initialization protocol sequentially.
 
 ---
 
@@ -31,7 +31,24 @@ Before writing any files, inspect the current workspace to understand its ground
 
 ---
 
-## STEP 2: Generate the Living Memory Suite
+## STEP 2: Discovery Interview (Ask Before Writing)
+
+Do NOT guess on a new/empty project. If the workspace is empty OR Step 1 left blanks (no stack, no entry point, no goal), STOP and ask the user these 5 questions first — then generate files from their answers:
+
+1. **What is this project about?** (1–2 sentences: problem + who it's for)
+2. **What do you want built first?** (immediate goal / MVP task)
+3. **Tech stack preference?** (language, framework, DB — or "you decide")
+4. **Rules / constraints?** (e.g. never delete logs, paper-test before live, no force-push)
+5. **Preferences?** (coding style, communication brevity, test mandate)
+
+Rules:
+- Ask only what's missing. If the repo already reveals stack/goal, ask just the gaps.
+- Wait for answers. Then use them verbatim to populate `PROJECT_CONTEXT.md`, `MEMORY.md` (prefs + invariants), `AGENTS.md` (safety rules), and `ACTIVE_TASK.md` (epic + checklist).
+- Never invent stack, rules, or goals for an empty project.
+
+---
+
+## STEP 3: Generate the Living Memory Suite
 
 Create the following 6 standard files in the workspace root, populated with real information detected during Step 1.
 
@@ -227,7 +244,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## STEP 3: Setup On-Demand Agent Skills & Sitemap Generator
+## STEP 4: Setup On-Demand Agent Skills & Sitemap Generator
 
 1. **Create Sitemap Generator Script:**
    Provide a lightweight, zero-dependency AST parser script (e.g. `scripts/generate_sitemap.py` for Python or equivalent for other stacks) that traverses the repository, extracts classes, functions, and imports, and updates `SITEMAP.md` automatically.
@@ -244,7 +261,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
-## STEP 4: Handover Verification
+## STEP 5: Handover Verification
 
 Once all files are created:
 1. Verify clean file creation and valid Markdown syntax.
