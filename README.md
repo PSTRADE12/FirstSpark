@@ -1,10 +1,10 @@
 # ⚡ FirstSpark
 
 > **The Universal Living Memory, Navigation & Coordination Engine for Multi-Agent AI Software Engineering.**  
-> *Transform any codebase into a self-evolving, context-aware "alive" system that works seamlessly across multiple AI models (Claude, Gemini, GPT-4o, Cursor, Roo Code, local LLMs).*
+> *Transform any codebase into a self-evolving, context-aware "alive" system that works seamlessly across any AI provider (Anthropic Claude, OpenAI GPT, Google Gemini, xAI Grok, Meta Muse, local LLMs).*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Model Agnostic](https://img.shields.io/badge/Models-Claude%20%7C%20Gemini%20%7C%20GPT--4o%20%7C%20DeepSeek-blue.svg)]()
+[![Model Agnostic](https://img.shields.io/badge/Models-Claude%20%7C%20GPT%20%7C%20Gemini%20%7C%20Grok%20%7C%20Muse-blue.svg)]()
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Pure%20Markdown%20%2B%20AST)-brightgreen.svg)]()
 [![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey.svg)]()
 
@@ -17,7 +17,7 @@ Most developers use AI agents as **ephemeral calculators**: they ask a question,
 In real software projects, this causes 4 catastrophic failure modes:
 
 1. **The "Groundhog Day" Trap:** You spend 2 hours helping an agent debug an obscure framework or API quirk. Two days later, a new agent session hits the same bug and wastes another 2 hours because institutional knowledge was never saved.
-2. **Context Amnesia on Model Switching:** When Claude hits rate limits and you switch to Gemini or GPT-4o, the incoming model has zero idea what was being worked on and asks: *"Hello! How can I help you today?"*.
+2. **Context Amnesia on Model Switching:** When your primary model hits rate limits and you switch providers (e.g. Claude → GPT / Gemini), the incoming model has zero idea what was being worked on and asks: *"Hello! How can I help you today?"*.
 3. **Token-Burning Blind Searches:** In a 500-file project, agents burn tens of thousands of tokens running random `grep` queries, guessing paths, and hallucinating imports.
 4. **Architectural Drift & Silent Regressions:** Agents modify a core file and inadvertently break downstream modules because the repository had no explicit rule invariants or dependency maps.
 
@@ -46,7 +46,7 @@ Your Repository Root (After Running FirstSpark)
    ```bash
    cp FIRSTSPARK.md /path/to/your-project/
    ```
-2. Open your favorite AI coding assistant (Cursor, Antigravity, Roo Code, Claude Code, GitHub Copilot) and send:
+2. Open your favorite AI coding assistant (Cursor, Antigravity, Claude Code, Codex, GitHub Copilot) and send:
    > *"Execute the FirstSpark protocol in `FIRSTSPARK.md` to initialize an alive, multi-agent coordination system for this project."*
 3. The agent will automatically scan your stack, detect your test runner and entry points, and generate the full 6-file suite tailored to your code.
 
@@ -105,7 +105,7 @@ flowchart TD
 ### 4. `ACTIVE_TASK.md` (The Relay Baton for Seamless Handovers)
 * The secret to multi-model collaboration.
 * Stores the active goal, step-by-step checklist, decisions made, and the **Immediate Next Action for the Incoming Agent**.
-* When Model A (e.g., Claude) hits a usage limit, you switch to Model B (e.g., Gemini). Model B reads `ACTIVE_TASK.md` and picks up the exact next line of code without asking you what to do.
+* When Model A hits a usage limit, you switch to Model B. Model B reads `ACTIVE_TASK.md` and picks up the exact next line of code without asking you what to do.
 
 ### 5. `PROJECT_CONTEXT.md` (The Architectural Blueprint)
 * Contains the high-level system overview, module dictionary, data flow diagrams, and domain glossary.
@@ -120,9 +120,9 @@ flowchart TD
 ```mermaid
 sequenceDiagram
     actor Developer as Developer
-    participant Agent1 as Model 1 (e.g., Claude 3.5 Sonnet)
+    participant Agent1 as Model 1 (e.g., Claude)
     participant Relay as ACTIVE_TASK.md & MEMORY.md
-    participant Agent2 as Model 2 (e.g., Gemini 3.8 / GPT-4o)
+    participant Agent2 as Model 2 (e.g., GPT / Gemini)
 
     Developer->>Agent1: "Build the authentication service"
     Agent1->>Relay: Reads rules, gotchas, & sitemap

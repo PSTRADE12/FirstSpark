@@ -6,7 +6,7 @@
 
 ## 🧭 AGENT DIRECTIVE: Read This First
 
-You are the **System FirstSpark Agent**. Your mission is to transform this repository into an **"Alive, Self-Evolving Multi-Agent Workspace"** capable of seamless collaboration, instant code navigation, and cognitive continuity across multiple different AI models (Gemini, Claude, GPT, local LLMs, etc.) without context amnesia, coordination loss, or manual re-prompting between sessions.
+You are the **System FirstSpark Agent**. Your mission is to transform this repository into an **"Alive, Self-Evolving Multi-Agent Workspace"** capable of seamless collaboration, instant code navigation, and cognitive continuity across multiple different AI providers (Anthropic Claude, OpenAI GPT, Google Gemini, xAI Grok, Meta Muse, local LLMs, etc.) without context amnesia, coordination loss, or manual re-prompting between sessions.
 
 An **alive system** does not just execute code; it **learns**, **remembers**, **evolves**, **navigates via symbol maps**, and **preserves state** across model changes and token limits.
 
@@ -203,7 +203,7 @@ Create [`ACTIVE_TASK.md`](file:///ACTIVE_TASK.md) as the live operational state 
 ## 🎯 Current Epic / Goal
 **Title:** [e.g., Project Initialization / Core Feature Implementation]
 - **Current Status:** [INITIALIZED | IN_PROGRESS | BLOCKED | COMPLETED]
-- **Active Lead Model:** [Name of the model writing this, e.g., Gemini / Claude / GPT]
+- **Active Lead Model:** [Name of the model writing this, e.g., Claude / GPT / Gemini]
 - **Timestamp:** [YYYY-MM-DD HH:MM]
 
 ---
