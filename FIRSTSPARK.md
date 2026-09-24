@@ -33,18 +33,25 @@ Before writing any files, inspect the current workspace to understand its ground
 
 ## STEP 2: Discovery Interview (Ask Before Writing)
 
-Do NOT guess on a new/empty project. If the workspace is empty OR Step 1 left blanks (no stack, no entry point, no goal), STOP and ask the user these 5 questions first — then generate files from their answers:
+Do NOT guess on a new/empty project. If the workspace is empty OR Step 1 left blanks (no stack, no entry point, no goal), STOP and ask the user these 6 questions first — then generate files from their answers:
 
 1. **What is this project about?** (1–2 sentences: problem + who it's for)
 2. **What do you want built first?** (immediate goal / MVP task)
 3. **Tech stack preference?** (language, framework, DB — or "you decide")
 4. **Rules / constraints?** (e.g. never delete logs, paper-test before live, no force-push)
 5. **Preferences?** (coding style, communication brevity, test mandate)
+6. **Scope guardrails?** (project name if different from folder, what's explicitly OUT of scope, how do we know v1 is done)
 
 Rules:
 - Ask only what's missing. If the repo already reveals stack/goal, ask just the gaps.
 - Wait for answers. Then use them verbatim to populate `PROJECT_CONTEXT.md`, `MEMORY.md` (prefs + invariants), `AGENTS.md` (safety rules), and `ACTIVE_TASK.md` (epic + checklist).
 - Never invent stack, rules, or goals for an empty project.
+
+**Lazy-user fallback:** If the user replies "just go ahead", "skip", "you decide", or gives no answer:
+- Proceed immediately with safe defaults (inferred stack or simplest standard stack, minimal safety rules, generic style).
+- Mark every unknown as `TBD — to be discovered` in the generated files, never leave blanks.
+- Record assumptions in `ACTIVE_TASK.md` under Key Decisions as `Assumed (pending user confirmation)`.
+- Discover and overwrite TBDs as work progresses via the Continuous Evolution Protocol (Step 3 File 1 §4).
 
 ---
 
